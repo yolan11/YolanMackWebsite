@@ -15,4 +15,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('Accueil');
+
+Route::get('/Pricelist', function(){
+    return view('pricelist');
+})->name('Pricelist');
+
+Route::get('/Contact', function(){
+    return view('contact');
+})->name('Contact');
+
+Route::get('/Reservation', function(){
+    return view('reservation');
+})->name('Reservation');
+
+//crud nouvelle reservation
+Route::get('/events', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
+Route::post('/events/store', [EventController::class, 'store']);

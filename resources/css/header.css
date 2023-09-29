@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ul{
+    display: flex;
+    gap: 0 30px;
+}
+ul li{
+    position: relative;
+    list-style: none;
+}
+ul li a{
+    position: relative;
+    font-size: 1.3em;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+}
+
+ul li a::before{
+    position: absolute;
+    content: attr(data-text);
+    color: #ed038d;
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    -webkit-text-stroke: 1px rgba(237,3,141,1);
+}
+
+ul li a:hover::before{
+    width: 100%;
+}
+
+ul li a.active{
+    position: relative;
+    font-size: 1.3em;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ed038d;
+    -webkit-text-stroke: 1px rgba(237,3,141,1);
+    font-weight: 700;
+}
+
+
+
+ul li a.active::before{
+    position: absolute;
+    content: attr(data-text);
+    color: #ed038d;
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+
