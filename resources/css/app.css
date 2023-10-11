@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.text1{
-    color: white;
+p .reveal{
     position: relative;
-    font-size: 80px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s ease;
 }
 
-
-
-
-
-
+div .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,12 +23,16 @@ Route::get('/Pricelist', function(){
 })->name('Pricelist');
 
 Route::get('/Contact', function(){
-    return view('contact');
+    return view('welcomebis');
 })->name('Contact');
 
 Route::get('/Reservation', function(){
     return view('reservation');
 })->name('Reservation');
+
+Route::get('/Gallery', function(){
+    return view('gallery');
+})->name('Gallery');
 
 //crud nouvelle reservation
 Route::get('/events', [EventController::class, 'index']);
