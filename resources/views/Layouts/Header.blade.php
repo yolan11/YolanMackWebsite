@@ -19,9 +19,9 @@
         </a>
     </div>
     <ul class="w-full h-full flex justify-end items-center">
-        <a href="{{ route('Accueil') }}" data-text="Galerie" class="text-white font-normal uppercase ">Accueil,</a>
-        <a href="{{ route('Gallery') }}" data-text="Contact" class=" text-white font-normal uppercase ">Gallerie,</a>
-        <a href="{{ route('Reservation') }}" data-text="Reserver" class=" text-white uppercase font-normal">Reserver.</a>
+        <a href="{{ route('Accueil') }}" data-text="Galerie" class="text-white font-normal text-xl md:text-2xl {{ Request::is('/') ? 'active' : '' }}">Accueil,</a>
+        <a href="{{ route('Gallery') }}" data-text="Contact" class=" text-white font-normal text-xl md:text-2xl pl-1 {{ Request::is('Gallery') ? 'active' : '' }}">Gallerie,</a>
+        <a href="{{ route('Reservation') }}" data-text="Reserver" class=" text-white font-normal text-xl md:text-2xl pl-1 {{ Request::is('Reservation') ? 'active' : '' }}">Reserver.</a>
     </ul>
 </header>
 </body>

@@ -23,7 +23,7 @@ Route::get('/Pricelist', function(){
 })->name('Pricelist');
 
 Route::get('/Contact', function(){
-    return view('welcomebis');
+    return view('Layouts/welcomebis');
 })->name('Contact');
 
 Route::get('/Reservation', function(){

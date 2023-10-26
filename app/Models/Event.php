@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     use HasFactory;
-    protected $fillable = ['familyName', 'firstName', 'email', 'phoneNumber', 'eventDate', 'eventLocation', 'eventType'];
+    protected $fillable = ['familyName', 'firstName', 'email', 'phoneNumber', 'eventDate', 'eventLocation',
+        'eventType', 'streetNumber', 'streetName', 'city', 'country', 'information'];
 }

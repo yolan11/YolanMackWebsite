@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.fond-couleur{
-    background: linear-gradient(80deg, white, black);
+.fondCouleur{
+    background: linear-gradient(80deg, pink, white);
     background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
 }

@@ -20,6 +20,11 @@ return new class extends Migration
             $table->date('eventDate');
             $table->string('eventLocation');
             $table->string('eventType');
+            $table->string('streetNumber');
+            $table->string('streetName');
+            $table->string('city');
+            $table->string('country');
+            $table->string('information')->nullable();
             $table->timestamps();
         });
     }

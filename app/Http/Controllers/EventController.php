@@ -39,9 +39,14 @@ class EventController extends Controller
         $event->eventDate = $request->eventDate;
         $event->eventLocation = $request->eventLocation;
         $event->eventType = $request->eventType;
+        $event->streetNumber = $request->streetNumber;
+        $event->streetName = $request->streetName;
+        $event->city = $request->city;
+        $event->country = $request->country;
+        $event->information = $request->information;
         $event->save();
 
-        return redirect('/')->with('success', 'La reservation à été envoyé avec succès.');
+        return redirect('/Reservation')->with('success', 'La reservation à été envoyé avec succès.');
     }
 }
 
