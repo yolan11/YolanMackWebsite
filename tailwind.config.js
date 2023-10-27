@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+        spacing: {
+            'calc-100-minus-280': 'calc(100% - 280px)',
+            'calc-100-minus-50': 'calc(100% - 60px)',
+        },
         fontFamily: {
             Montserrat: "'Montserrat', sans-serif",
         },

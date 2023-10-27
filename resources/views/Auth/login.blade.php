@@ -6,15 +6,20 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Connexion</title>
+    <link rel="icon" type="image" href="{{ URL('images/logo4.png') }}">
     @vite('resources/css/app.css')
 </head>
 <body>
 <div class="w-full h-screen flex items-center justify-center">
-    <div class="w-1/5 h-3/6 flex flex-col items-center justify-center">
-        <img src="{{ URL('images/logoSiteWeb/logo1.png') }}" alt="Logo1" class="logo1 h-10 w-auto justify-enter items-center">
-        @if (session('success'))
-            <div class="w-full bg-yellow-400 alert alert-success flex justify-center items-center">
-                {{ session('success') }}
+    <div class="sm:w-1/5 sm:h-3/6 flex flex-col items-center justify-center">
+        <img src="{{ URL('images/logo4.png') }}" alt="Logo1" class="logo1 h-10 w-auto justify-enter items-center">
+        @if ($errors->any())
+            <div>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
             </div>
         @endif
         <form method="POST" action="{{ route('Login.store') }}">
@@ -25,9 +30,6 @@
                 <button class="w-full bg-[black] py-3 text-center text-white" type="submit">Se connecter</button>
             </div>
         </form>
-        <a class="mt-5 w-full" href="{{ route('Register.create') }}">
-            <button class="w-full bg-[black] py-3 text-center text-white" type="submit">Créer un compte</button>
-        </a>
     </div>
 </div>
 </body>

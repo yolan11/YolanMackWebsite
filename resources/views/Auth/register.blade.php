@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inscription</title>
+    <link rel="icon" type="image" href="{{ URL('images/logo4.png') }}">
     @vite('resources/css/app.css')
 
 </head>
@@ -21,7 +22,7 @@
                 </ul>
             </div>
         @endif
-        <img src="{{ URL('images/logoSiteWeb/logo1.png') }}" alt="Logo1" class="logo1 h-10 w-auto justify-enter items-center">
+        <img src="{{ URL('images/logo4.png') }}" alt="Logo1" class="logo1 h-10 w-auto justify-enter items-center">
         <form method="POST" action="{{ route('Register.store') }}">
             @csrf
             <input name="name" id="name" type="text" placeholder="Nom" class="mt-4 py-3 w-full border border-gray-400 py-1 px-2" required>

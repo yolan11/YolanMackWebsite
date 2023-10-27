@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\DashboardReservationController;
 use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,7 +36,17 @@ Route::get('/Gallery', function(){
     return view('gallery');
 })->name('Gallery');
 
+
+
 //crud nouvelle reservation
 Route::get('/events', [EventController::class, 'index']);
 Route::get('/events/create', [EventController::class, 'create']);
 Route::post('/events/store', [EventController::class, 'store']);
+
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard/reservation', [DashboardReservationController::class, 'index'])->name('dashboardReservation');
+
+});
+
+require __DIR__.'/auth.php';
