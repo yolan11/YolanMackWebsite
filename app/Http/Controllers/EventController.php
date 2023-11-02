@@ -29,6 +29,11 @@ class EventController extends Controller
             'eventDate' => 'required',
             'eventLocation' => 'required',
             'eventType' => 'required',
+            'streetNumber' => 'required',
+            'streetName' => 'required',
+            'city' => 'required',
+            'country' => 'required',
+            'information' => 'required',
         ]);
 
         $event = new Event();

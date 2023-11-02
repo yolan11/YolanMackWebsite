@@ -1,14 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Footer</title>
-    @vite('resources/css/footer.css')
-</head>
-<body>
 <footer class=" relative bg-black w-full h-screen flex flex-col justify-center items-center">
     <div class="h-60 flex justify-center items-center">
         <a href="/" class="group">
@@ -173,46 +162,7 @@
 
 </footer>
 
-<script name="modal1">
-    // JavaScript pour ouvrir et fermer la fenêtre modale
-    const openModal1 = document.getElementById("openModal1");
-    const closeModal1 = document.getElementById("closeModal1");
-    const modal1 = document.getElementById("myModal1");
+<script src="{{ asset('js/showModal1.js') }}" defer></script>
+<script src="{{ asset('js/showModal2.js') }}" defer></script>
 
-    openModal1.addEventListener("click", () => {
-        modal1.classList.remove("hidden");
-    });
 
-    closeModal1.addEventListener("click", () => {
-        modal1.classList.add("hidden");
-    });
-
-    modal1.addEventListener("click", (e) => {
-        if (e.target === modal1) {
-            modal1.classList.add("hidden");
-        }
-    });
-</script>
-
-<script name="modal2">
-    // JavaScript pour ouvrir et fermer la fenêtre modale
-    const openModal2 = document.getElementById("openModal2");
-    const closeModal2 = document.getElementById("closeModal2");
-    const modal2 = document.getElementById("myModal2");
-
-    openModal2.addEventListener("click", () => {
-        modal2.classList.remove("hidden");
-    });
-
-    closeModal2.addEventListener("click", () => {
-        modal2.classList.add("hidden");
-    });
-
-    modal2.addEventListener("click", (e) => {
-        if (e.target === modal2) {
-            modal2.classList.add("hidden");
-        }
-    });
-</script>
-</body>
-</html>

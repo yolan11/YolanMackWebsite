@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Yolan Mack - DJ Compiègne - Évènementiel, Soirées, Mariages</title>
-    <link rel="icon" type="image" href="{{ URL('images/logo4.png') }}">
+    <link rel="icon" type="image" href="{{ URL('images/logo.png') }}">
 
     <!-- SEO website -->
     <meta property="og:locale" content="fr_FR">
@@ -23,11 +23,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
 
+
 </head>
 <body class="bg-white">
 @include('Layouts.Header')
 
-<div class="w-full h-full flex flex-col items-center justify-center bg-white">
+<div id="landingVideo" class="w-full h-full flex flex-col items-center justify-center bg-white">
     <div class="w-full h-screen pt-20">
         <div name="video" class="w-full h-full">
             <div class="w-full h-full">
@@ -85,60 +86,6 @@
         </div>
     </div>
 </div>
-
-<script name="scrollBouton">
-    document.getElementById("scrollToSection2").addEventListener("click", function(event) {
-        event.preventDefault(); // Empêche le comportement par défaut du lien
-        const section2 = document.getElementById("aPropos");
-        const offset = section2.offsetTop; // Position de la section2 par rapport au haut de la page
-        const duration = 500; // Durée de l'animation en millisecondes
-
-        // Fonction pour effectuer l'animation de défilement
-        function smoothScroll() {
-            if (window.pageYOffset < offset) {
-                window.scrollBy(0, 10);
-                setTimeout(smoothScroll, 10);
-            }
-        }
-
-        smoothScroll();
-    });
-
-</script>
-
-<script name="sound">
-    // Récupérer les éléments boutonUnMute, boutonMute et la vidéo
-    var buttonUnMute = document.querySelector('.buttonUnMute');
-    var buttonMute = document.querySelector('.buttonMute');
-    var video = document.querySelector('video');
-
-    // Cacher le bouton de mute au chargement de la page
-    buttonMute.style.display = 'none';
-
-    // Écouter le clic sur le boutonUnMute
-    buttonUnMute.addEventListener('click', function () {
-        // Activer le son de la vidéo
-        video.muted = false;
-
-        // Cacher le boutonUnMute
-        buttonUnMute.style.display = 'none';
-
-        // Afficher le boutonMute
-        buttonMute.style.display = 'flex';
-    });
-
-    // Écouter le clic sur le boutonMute
-    buttonMute.addEventListener('click', function () {
-        // Couper le son de la vidéo
-        video.muted = true;
-
-        // Cacher le boutonMute
-        buttonMute.style.display = 'none';
-
-        // Afficher le boutonUnMute
-        buttonUnMute.style.display = 'flex';
-    });
-</script>
 
 <div id="aPropos" class="w-full h-full flex flex-col px-6 bg-white flex justify-center items-center">
     <div class="w-full xl:w-9/12 h-full flex flex-col justify-start items-center py-14 sm:py-20">
@@ -291,6 +238,7 @@
 </div>
 
 @include('Layouts.Footer')
-
+<script src="{{ asset('js/scrollButton.js') }}"></script>
+<script src="{{ asset('js/soundButton.js') }}"></script>
 </body>
 </html>

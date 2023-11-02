@@ -9,6 +9,7 @@ class DashboardReservationController extends Controller
 {
     public function index()
     {
-        return view('Admin.dashboardReservation');
+        $events = Event::all();
+        return view('Admin.dashboardReservation', compact('events'));
     }
 }

@@ -12,7 +12,7 @@
     <div class="w-full h-full flex justify-between items-center px-4">
         <div class="w-auto h-full flex justify-center items-center gap-4">
             <img src="{{ URL('images/logo4.png') }}" alt="" class="w-10 h-10">
-            <h1 class="font-bold text-2xl">AdminHub</h1>
+            <h1 class="font-bold text-2xl">Administration</h1>
         </div>
         <div class="w-auto h-full flex justify-center items-center">
             <form action="{{ route('Logout') }}" method="POST">
