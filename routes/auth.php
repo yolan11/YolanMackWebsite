@@ -9,12 +9,15 @@ Route::middleware('guest')->group(function () {
 
     Route::post('/login/store', [LoginController::class, 'store'])->name('Login.store')->middleware('throttle:5,1');
 
-    Route::post('/register/store', [RegisterController::class, 'store'])->name('Register.store');
 
-    Route::get('/register', [RegisterController::class, 'create'])->name('Register.create');
 });
 
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('Logout');
+
+    Route::post('/register/store', [RegisterController::class, 'store'])->name('Register.store');
+
+    Route::get('/register', [RegisterController::class, 'create'])->name('Register.create');
+
 
 });

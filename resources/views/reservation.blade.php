@@ -10,7 +10,7 @@
 </head>
 <body>
 @include('Layouts.Header')
-<div class="fondCouleur w-full h-full flex justify-center items-center">
+<div class="bg-black w-full h-full flex justify-center items-center">
     <div class="w-full h-full flex justify-center items-center md:py-20">
         <div class="w-full md:w-[700px] lg:w-[800px] h-full bg-white p-4">
             @if(session('success'))
@@ -107,9 +107,18 @@
                                 <label for="">Type d'évènement</label>
                                 <select placeholder="hello" name="eventType" id="eventType"
                                     class="border border-gray-400 py-1 px-2 bg-gray-100 focus:bg-white" required>
+                                    <option value="typeDevenement">Type d'évènement</option>
                                     <option value="mariage">Mariage</option>
                                     <option value="anniversaire">Anniversaire</option>
-                                    <option value="evènementSportif">Evènement sportif</option>
+                                    <option value="coktailEntreprise">Coktail entreprise</option>
+                                    <option value="buffet">Buffet</option>
+                                    <option value="arbreDeNoel">Arbre de noel</option>
+                                    <option value="fete">Fete</option>
+                                    <option value="anniversaireDentreprise">Anniversaire d'entreprise</option>
+                                    <option value="anniversaireDeMariage">Anniversaire de mariage</option>
+                                    <option value="conference">Conférence</option>
+                                    <option value="evenementPublic">Evenement public</option>
+                                    <option value="evenementPrivee">Evenement privée</option>
                                 </select>
                             </div>
                         </div>
