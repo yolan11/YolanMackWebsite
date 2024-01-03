@@ -27,9 +27,9 @@ Route::get('/Reservation', function(){return view('reservation');})->name('Reser
 Route::get('/Gallery', [ImageController::class, 'index'])->name('Gallery');
 
 //Crud nouvelle reservation
-Route::get('/events', [EventController::class, 'index']);
-Route::get('/events/create', [EventController::class, 'create']);
-Route::post('/events/store', [EventController::class, 'store']);
+Route::get('/event', [EventController::class, 'index']);
+Route::get('/event/create', [EventController::class, 'create']);
+Route::post('/event/store', [EventController::class, 'store']);
 });
 
 
@@ -50,6 +50,11 @@ Route::middleware('auth')->group(function () {
     //User routes
     Route::delete('/user/destroy/{id}', [LoginController::class, 'destroy'])->name('User.destroy');
     Route::put('/user/update/{id}', [LoginController::class, 'update'])->name('User.update');
+
+    //Event Routes
+    Route::delete('/event/destroy/{id}', [EventController::class, 'destroy'])->name('deleteEvent');
+    Route::get('/getEventData/{id}', [EventController::class, 'getEventData']);
+    Route::put('/event/update/{id}', [EventController::class, 'update'])->name('updateEvent');
 
 });
 

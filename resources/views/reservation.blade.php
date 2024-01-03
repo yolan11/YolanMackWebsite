@@ -35,7 +35,7 @@
 
             <h2 class="text-3xl pt-16  md:py-6 text-black pl-10">Formulaire de réservation</h2>
                 <div class="w-full h-full py-10 px-6">
-                    <form method="POST" action="/events/store">
+                    <form method="POST" action="/event/store">
                         @csrf
                         <h1 class="test-black py-4 text-2xl">Informations client</h1>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 py-2">
@@ -127,7 +127,7 @@
                         <div class="flex flex-col">
                             <label for="">Autres informations</label>
                             <input type="text" name="information" id="information"
-                                   class="border border-gray-400 py-1 px-2 w-full bg-gray-100 focus:bg-white">
+                                   class="border border-gray-400 py-1 px-2 w-full bg-gray-100 focus:bg-white" required>
                         </div>
 
                         <div class="mt-5 flex justify-center items-center">
