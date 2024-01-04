@@ -9,11 +9,8 @@
                         <form action="{{ route('uploadImage') }}" method="POST" enctype="multipart/form-data" class="w-full h-full flex flex-col justify-center align-center">
                             @csrf
                             <input type="file" name="image" class="m-4"/>
-                            <input type="submit" value="Upload Image" class="m-4"/>
+                            <input type="submit" value="Importer une image" class=" bg-black py-2 text-white m-4"/>
                         </form>
-                        <div class="w-full p-4 flex">
-                            <button id="closePictureCreateModal" class="w-full bg-black py-2 text-white">Annuler</button>
-                        </div>
                     </div>
                 </div>
             </div>

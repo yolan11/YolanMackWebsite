@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,35 +27,6 @@
     <script src="{{ asset('js/soundButton.js') }}" defer></script>
     <script src="https://player.vimeo.com/api/player.js" defer></script>
 
-    <style>
-        /* Makes a fixed background wrapper
-which the user cannot interact with */
-
-        .iframe-wrapper {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        /* Make the iframe keep an aspect ratio, and
-        position it in the middle of its parent wrapper*/
-
-        .iframe-wrapper iframe {
-            width: 100vw;
-            height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-            min-height: 100vh;
-            min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    </style>
-
 </head>
 <body class="bg-white">
 @include('Layouts.Header')
@@ -71,7 +42,6 @@ which the user cannot interact with */
                         </div>
                     </div>
                     <div class=" relative w-full h-full flex justify-center items-center">
-
                             <div class="z-1 w-full h-full flex items-center justify-center">
                                 <a href="{{ route('Reservation') }}" class="group w-11/12 sm:w-10/12 md:w-9/12 h-[150px] flex justify-center items-center flex-col">
                                 <h1 class="text-white text-2xl  sm:text-4xl  lg:text-5xl lg:leading-[57px]  py-2 text-center font-semibold duration-500">
@@ -118,16 +88,15 @@ which the user cannot interact with */
 
 <div class="w-full h-full px-6 py-10 flex flex-col bg-white">
     <div class="w-full h-full ">
-        <h1 class="text-black text-2xl sm:text-4xl py-4">Nous intervenons sur tout <br> types d'évènements.</h1>
+        <h1 class="text-black text-lg sm:text-4xl py-4">Nous intervenons sur tout <br> types d'évènements.</h1>
     </div>
-    <div class="col-span-1 w-full h-full aspect-video sm:w-full sm:h-[80vh] overflow-hidden carousel2">
+    <div class="col-span-1 w-full h-full aspect-video sm:w-full sm:h-[80vh] overflow-hidden carousel1">
         <div class="w-full h-full group relative flex" id="image1">
             <img src="{{ URL('images/event/18ans.jpg') }}" alt="Image 1" class="w-full h-full object-cover
                     transition duration-200 group-hover:scale-105 group-hover:duration-200 group-hover:transition">
             <h1 class="m-6 w-auto h-auto text-white text-3xl sm:text-6xl absolute top-0 left-0 z-10
                      mix-blend-difference">Anniversaire
             </h1>
-
         </div>
         <div class="w-full h-full hidden group relative flex" id="image2">
             <img src="{{ URL('images/event/19ans.jpg') }}" alt="Image 2" class="w-full h-full
@@ -136,7 +105,6 @@ which the user cannot interact with */
             <h1 class="m-6 w-auto h-auto text-white text-3xl sm:text-6xl absolute top-0 right-0 z-10
                      mix-blend-difference">Fete de village
             </h1>
-
         </div>
         <div class="w-full h-full hidden group relative flex" id="image3">
             <img src="{{ URL('images/event/60ans.jpg') }}" alt="Image 3" class="w-full h-full
@@ -145,7 +113,6 @@ which the user cannot interact with */
             <h1 class="m-6 w-auto h-auto text-white text-3xl sm:text-6xl absolute bottom-0 right-0 z-10
                      mix-blend-difference">Mariage
             </h1>
-
         </div>
         <div class="w-full h-full hidden group relative flex" id="image4">
             <img src="{{ URL('images/event/evenementSportif.jpg') }}" alt="Image 4" class="w-full h-full
@@ -156,7 +123,6 @@ which the user cannot interact with */
             </h1>
         </div>
     </div>
-
 </div>
 
 <div class="w-full px-6 pt-6 flex justify-start items-center">
@@ -167,8 +133,8 @@ which the user cannot interact with */
         </div>
         <div class="w-full">
             <p class=" text-lg sm:text-4xl ">
-                Afin de vous garentir des prestations d'exceptions nous achetons du matériel de marques reconnus et
-                fiable au près de distributeurs Européen .
+                Afin de vous garentir des prestations d'exceptions nous achetons du matériel à des marques reconnus et
+                fiables au près de distributeurs Européen .
             </p>
         </div>
     </div>
@@ -215,6 +181,28 @@ which the user cannot interact with */
 </div>
 
 @include('Layouts.Footer')
+
+<!--script pour faire defiler la page-->
+<script>
+    document.getElementById("scrollToSection2").addEventListener("click", function(event) {
+        event.preventDefault(); // Empêche le comportement par défaut du lien
+        const section2 = document.getElementById("aPropos");
+        const offset = section2.offsetTop; // Position de la section2 par rapport au haut de la page
+        const duration = 500; // Durée de l'animation en millisecondes
+
+        // Fonction pour effectuer l'animation de défilement
+        function smoothScroll() {
+            if (window.pageYOffset < offset) {
+                window.scrollBy(0, 10);
+                setTimeout(smoothScroll, 10);
+            }
+        }
+
+        smoothScroll();
+    });
+</script>
+
+<!--script carousel-->
 <script>
     function setupCarousel(carouselContainer) {
         let currentIndex = 0;
@@ -240,9 +228,6 @@ which the user cannot interact with */
 
     // Utilisation avec différentes divs carrousel
     setupCarousel(document.querySelector('.carousel1'));
-    setupCarousel(document.querySelector('.carousel2'));
-    setupCarousel(document.querySelector('.carousel3'));
-    setupCarousel(document.querySelector('.carousel4'));
 
 
     // Ajoutez autant d'appels à setupCarousel que nécessaire pour vos divs carrousel supplémentaires

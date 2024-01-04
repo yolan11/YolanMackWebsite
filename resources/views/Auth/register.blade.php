@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -25,10 +25,14 @@
         <img src="{{ URL('images/logo4.png') }}" alt="Logo1" class="logo1 h-10 w-auto justify-enter items-center">
         <form method="POST" action="{{ route('Register.store') }}">
             @csrf
-            <input name="name" id="name" type="text" placeholder="Nom" class="mt-4 py-3 w-full border border-gray-400 py-1 px-2" required>
-            <input name="email" id="email" type="email" placeholder="Email" class="mt-4 py-3 w-full border border-gray-400 py-1 px-2" required>
-            <input name="password" id="password" type="password" placeholder="Mot de passe" class="mt-4 py-3 w-full border border-gray-400 py-1 px-2" required>
-            <input name="password_confirmation" id="password_confirmation" type="password" placeholder="Confirmation de mot de passe" class="mt-4 py-3 w-full border border-gray-400 py-1 px-2" required>
+            <input name="name" id="name" type="text" placeholder="Nom" class="mt-4 py-3 w-full border border-gray-400
+             py-1 px-2" required>
+            <input name="email" id="email" type="email" placeholder="Email" class="mt-4 py-3 w-full border
+            border-gray-400 py-1 px-2" required>
+            <input name="password" id="password" type="password" placeholder="Mot de passe" class="mt-4 py-3 w-full
+             border border-gray-400 py-1 px-2" required>
+            <input name="password_confirmation" id="password_confirmation" type="password" placeholder="Confirmation
+             de mot de passe" class="mt-4 py-3 w-full border border-gray-400 py-1 px-2" required>
             <div class="mt-5">
                 <button class="w-full bg-[black] py-3 text-center text-white" type="submit">S'inscrire</button>
             </div>

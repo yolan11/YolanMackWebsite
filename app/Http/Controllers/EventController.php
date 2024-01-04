@@ -62,13 +62,48 @@ class EventController extends Controller
             'familyName' => $request->familyName,
             'firstName' => $request->firstName,
             'email' => $request->email,
-            // Ajoutez d'autres détails que vous souhaitez inclure dans l'e-mail
         ];
 
-        Mail::to('destinataire@example.com')->send(new NewAppointment($details));
+        Mail::to('contact@yolanmack.com')->send(new NewAppointment($details));
 
         return redirect('/Reservation')->with('success', 'La reservation à été envoyé avec succès.');
     }
+
+    public function storeAdmin(Request $request)
+    {
+        $request->validate([
+            'familyName' => 'required',
+            'firstName' => 'required',
+            'email' => 'required',
+            'phoneNumber' => 'required',
+            'eventDate' => 'required',
+            'eventLocation' => 'required',
+            'eventType' => 'required',
+            'streetNumber' => 'required',
+            'streetName' => 'required',
+            'city' => 'required',
+            'country' => 'required',
+            'information' => 'required',
+        ]);
+
+        $event = new Event();
+        $event->familyName = $request->familyName;
+        $event->firstName = $request->firstName;
+        $event->email = $request->email;
+        $event->phoneNumber = $request->phoneNumber;
+        $event->eventDate = $request->eventDate;
+        $event->eventLocation = $request->eventLocation;
+        $event->eventType = $request->eventType;
+        $event->streetNumber = $request->streetNumber;
+        $event->streetName = $request->streetName;
+        $event->city = $request->city;
+        $event->country = $request->country;
+        $event->information = $request->information;
+        $event->save();
+
+        return redirect('/dashboard/event')->with('success', 'La reservation à été envoyé avec succès.');
+    }
+
 
     public function update(Request $request, $id){
         // Récupérer la marque à mettre à jour

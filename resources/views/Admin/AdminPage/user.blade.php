@@ -33,7 +33,7 @@
                                     </button>
                                 </td>
                                 <td class="border border-slate-300">
-                                    <form action="{{ route('User.destroy', $user->id) }}" method="POST">
+                                    <form action="{{ route('userDestroy', $user->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="w-full p-4 h-full bg-red-300">Supprimer</button>
@@ -50,7 +50,7 @@
             <div id="userCreateModal" class="absolute bg-black w-full h-full bg-opacity-50 flex justify-center items-center hidden">
                 <div class="bg-white w-[500px] flex justify-center items-center">
                     <div class=" w-full h-full flex flex-col justify-center items-center">
-                        <form action="{{ route('Register.store') }}" method="POST" class="w-full flex flex-col justify-center align-center">
+                        <form action="{{ route('registerStore') }}" method="POST" class="w-full flex flex-col justify-center align-center">
                             @csrf
                             <input name="name" id="name" type="text" placeholder="Nom" class="m-4 " required>
                             <input name="email" id="email" type="email" placeholder="Email" class="m-4" required>
@@ -69,7 +69,7 @@
             <div id="userUpdateModal" class="absolute bg-black w-full h-full bg-opacity-50 flex justify-center items-center hidden">
                 <div class="bg-white w-[500px] flex justify-center items-center">
                     <div class=" w-full h-full flex flex-col justify-center items-center">
-                        <form id="updateUserForm" action="{{ route('User.update', $user->id) }}" method="POST" class="w-full flex flex-col justify-center align-center">
+                        <form id="updateUserForm" action="{{ route('userUpdate', $user->id) }}" method="POST" class="w-full flex flex-col justify-center align-center">
                             @method('PUT')
                             @csrf
                             <input name="editName" id="editName" type="text" placeholder="Nom" class="m-4 ">

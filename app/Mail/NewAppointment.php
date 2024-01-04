@@ -22,6 +22,8 @@ class NewAppointment extends Mailable
 
     public function build()
     {
-        return $this->view('emails.welcome'); // Remplacez 'votre_template' par le nom de votre vue
+        return $this->from('website@yolanmack.com', 'Réservation Yolan Mack')
+            ->subject('Nouvelle réservation')
+            ->view('emails.welcome');
     }
 }

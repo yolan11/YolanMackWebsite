@@ -36,14 +36,17 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'url' => env('MAIL_URL'),
             'host' => env('MAIL_HOST', 'smtp.ionos.fr'),
             'port' => env('MAIL_PORT', 465),
             'encryption' => env('MAIL_ENCRYPTION', 'SSL/TLS'),
-            'username' => env('contact@yolanmack.com'),
-            'password' => env('RE/A8y2tR.Q3.qr'),
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'from' => [
+                'address' => env('MAIL_FROM_ADDRESS', 'noReply@yolanmack.com'),
+                'name' => env('MAIL_FROM_NAME', 'yolanmack'),
+            ],
         ],
 
         'ses' => [

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -99,7 +99,7 @@
                                        id="date-input" required>
                             </div>
                             <div class="flex flex-col col-span-1">
-                                <label for="">Lieu et adresse du lieu d'évènement</label>
+                                <label for="">Lieu et adresse de l'évènement</label>
                                 <input name="eventLocation" id="eventLocation" type="text"
                                        class="border border-gray-400 py-1 px-2 bg-gray-100 focus:bg-white" required>
                             </div>

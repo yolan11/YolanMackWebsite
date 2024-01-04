@@ -23,6 +23,11 @@ class DashboardController extends Controller
     public function showAdminEvent()
     {
         $events = Event::all();
+
+        if ($events->isEmpty()) {
+            return redirect('/dashboard/event/error');
+        }
+
         return view('Admin.AdminPage.event', compact('events'));
     }
 
@@ -40,6 +45,11 @@ class DashboardController extends Controller
     public function showAdminImageError()
     {
         return view('Admin.AdminPage.no-image-found');
+    }
+
+    public function showAdminEventError()
+    {
+        return view('Admin.AdminPage.no-event-found');
     }
 
 }

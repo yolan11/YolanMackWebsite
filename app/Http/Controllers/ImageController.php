@@ -15,7 +15,7 @@ class ImageController extends Controller
 
         return view('gallery', compact('images'));
     }
-    public function upload(Request $request)
+    public function store(Request $request)
     {
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $image = $request->file('image');
