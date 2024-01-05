@@ -6,7 +6,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Réservation - Yolan Mack</title>
-    @vite('resources/css/reservation.css')
+    <link rel="icon" type="image" href="{{ URL('images/logo.png') }}">
+
+
+    <!-- SEO website -->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Réservation - Yolan Mack">
+    <meta property="og:description" content="Yolan Mack est un DJ amateur spécialisé dans les soirées, mariages
+     et évènements. Basé à Lacroix Saint Ouen près de Compiègne. Solutions techniques, mix, sound system.">
+    <meta property="og:url" content="https://yolanmack.com/Reservation">
+    <meta property="og:site_name" content="Yolan Mack">
+
+    @vite('resources/css/app.css')
 </head>
 <body>
 @include('Layouts.Header')

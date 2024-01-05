@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\NewAppointment;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use Illuminate\Support\Facades\Config; // Importer la classe Config

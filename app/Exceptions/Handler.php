@@ -31,10 +31,12 @@ class Handler extends ExceptionHandler
 
     public function render($request, Throwable $exception)
     {
-        if ($exception instanceof NotFoundHttpException) {
-            return response()->view('errors.404', [], 404);
+        if ($this->isHttpException($exception)) {
+            return $this->renderHttpException($exception);
+        } else {
+            return response()->view('errors.404', [], 404); // Page d'erreur générique
         }
-
-        return parent::render($request, $exception);
     }
+
+
 }

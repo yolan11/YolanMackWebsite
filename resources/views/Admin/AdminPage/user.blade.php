@@ -132,7 +132,7 @@
 
                 // Mettre à jour l'attribut "action" du formulaire de mise à jour avec l'ID de la ligne
                 var updateForm = document.getElementById('updateUserForm');
-                updateForm.action = "{{ route('User.update', ':id') }}".replace(':id', id);
+                updateForm.action = "{{ route('userUpdate', ':id') }}".replace(':id', id);
 
                 // Afficher la modal
                 document.getElementById('userUpdateModal').style.display = 'flex';

@@ -5,7 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Media - Yolan Mack</title>
+    <link rel="icon" type="image" href="{{ URL('images/logo.png') }}">
+
+
+    <!-- SEO website -->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Media - Yolan Mack">
+    <meta property="og:description" content="Découvrez des photos d'évènements">
+    <meta property="og:url" content="https://yolanmack.com/Gallery">
+    <meta property="og:site_name" content="Yolan Mack">
+
     @vite('resources/css/app.css')
 </head>
 <body class="bg-white">

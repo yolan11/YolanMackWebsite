@@ -110,7 +110,7 @@
                 <h1 class="text-xl font-medium my-2">Responsable de la publication</h1>
                 <p>
                     Directeur de la publication : Yolan Mazajczyk
-                    Hébergeur du site : IONOS
+                    <br>Hébergeur du site : IONOS
                 </p>
                 <h1 class="text-xl font-medium my-2">Propriété intellectuelle</h1>
                 <p>

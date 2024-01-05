@@ -23,8 +23,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
 
-    <script src="{{ asset('js/scrollButton.js') }}" defer></script>
-    <script src="{{ asset('js/soundButton.js') }}" defer></script>
     <script src="https://player.vimeo.com/api/player.js" defer></script>
 
 </head>
@@ -48,7 +46,7 @@
                                     Bienvenue sur le site de la société Yolan Mack, DJ généraliste basé près de
                                     compiègne</h1>
                                 <p class="group-hover:text-white group-hover:font-medium text-gray-300 py-2 mt-10 uppercase flex justify-center items-center text-lg">
-                                    Je Reserve
+                                    Réserver
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                          stroke-width="1.5" stroke="currentColor" class="w-4 h-4 group">
                                         <path stroke-linecap="round" stroke-linejoin="round"
