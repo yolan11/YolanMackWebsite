@@ -22,7 +22,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             // L'utilisateur est authentifié
-            return redirect()->intended('/dashboard/user'); // Redirigez l'utilisateur vers la page de tableau de bord ou une autre page sécurisée
+            return redirect()->intended('/dashboard'); // Redirigez l'utilisateur vers la page de tableau de bord ou une autre page sécurisée
         }
 
         // L'authentification a échoué
