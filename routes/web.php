@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,10 @@ Route::middleware('guest')->group(function () {
     //Crud nouvelle reservation
     Route::get('/event', [EventController::class, 'index']);
     Route::post('/event/store', [EventController::class, 'store']);
+
+    //Sitemap
+    Route::get('/sitemap.xml', [SitemapController::class, 'index']);
+
 
 });
 

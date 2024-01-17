@@ -13,13 +13,13 @@
         </div>
         <div class="w-full flex flex-row justify-center sm:gap-4 p-4 sm:p-0">
             <a href="https://www.instagram.com/yolanmack/" class="col-span-1 group flex sm:justify-center items-center " target="_blank">
-                <img src="{{ URL('images/socialMedia/instagram.png') }}" alt="" class="w-6 h-auto mr-2">
+                <img src="{{ URL('images/socialMedia/instagram.webp') }}" alt="" class="w-6 h-auto mr-2">
             </a>
             <a href="https://twitter.com/yolanmack" class=" col-span-1 flex sm:justify-center items-center " target="_blank">
-                <img src="{{ URL('images/socialMedia/twitterx.png') }}" alt="" class="w-6 h-auto mr-2">
+                <img src="{{ URL('images/socialMedia/twitterx.webp') }}" alt="" class="w-6 h-auto mr-2">
             </a>
             <a href="https://wa.me/0664568789" class=" col-span-1 flex sm:justify-center items-center " target="_blank">
-                <img src="{{ URL('images/socialMedia/whatsapp.png') }}" alt="" class="w-6 h-auto mr-2">
+                <img src="{{ URL('images/socialMedia/whatsapp.webp') }}" alt="" class="w-6 h-auto mr-2">
             </a>
         </div>
     </div>

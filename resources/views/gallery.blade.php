@@ -13,7 +13,7 @@
     <meta property="og:locale" content="fr_FR">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Media - Yolan Mack">
-    <meta property="og:description" content="Découvrez des photos d'évènements">
+    <meta property="og:description" content="Découvrez des photos de nos évènements">
     <meta property="og:url" content="https://yolanmack.com/Gallery">
     <meta property="og:site_name" content="Yolan Mack">
 

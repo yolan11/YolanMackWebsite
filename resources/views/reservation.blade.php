@@ -13,8 +13,8 @@
     <meta property="og:locale" content="fr_FR">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Réservation - Yolan Mack">
-    <meta property="og:description" content="Yolan Mack est un DJ amateur spécialisé dans les soirées, mariages
-     et évènements. Basé à Lacroix Saint Ouen près de Compiègne. Solutions techniques, mix, sound system.">
+    <meta property="og:description" content="Vous cherchez un dj pour un évènement, un mariage, une fête privée
+     autour de Compiègne ou dans les Hauts-de-France ?">
     <meta property="og:url" content="https://yolanmack.com/Reservation">
     <meta property="og:site_name" content="Yolan Mack">
 

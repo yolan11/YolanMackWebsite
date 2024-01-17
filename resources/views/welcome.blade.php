@@ -90,14 +90,14 @@
     </div>
     <div class="col-span-1 w-full h-full aspect-video sm:w-full sm:h-[80vh] overflow-hidden carousel1">
         <div class="w-full h-full group relative flex" id="image1">
-            <img src="{{ URL('images/event/18ans.jpg') }}" alt="Image 1" class="w-full h-full object-cover
+            <img src="{{ URL('images/event/18ans.webp') }}" alt="Image 1" class="w-full h-full object-cover
                     transition duration-200 group-hover:scale-105 group-hover:duration-200 group-hover:transition">
             <h1 class="m-6 w-auto h-auto text-white text-3xl sm:text-6xl absolute top-0 left-0 z-10
                      mix-blend-difference">Anniversaire
             </h1>
         </div>
         <div class="w-full h-full hidden group relative flex" id="image2">
-            <img src="{{ URL('images/event/19ans.jpg') }}" alt="Image 2" class="w-full h-full
+            <img src="{{ URL('images/event/19ans.webp') }}" alt="Image 2" class="w-full h-full
                     object-cover transition duration-200 group-hover:scale-105 group-hover:duration-200
                     group-hover:transition">
             <h1 class="m-6 w-auto h-auto text-white text-3xl sm:text-6xl absolute top-0 right-0 z-10
@@ -105,7 +105,7 @@
             </h1>
         </div>
         <div class="w-full h-full hidden group relative flex" id="image3">
-            <img src="{{ URL('images/event/60ans.jpg') }}" alt="Image 3" class="w-full h-full
+            <img src="{{ URL('images/event/60ans.webp') }}" alt="Image 3" class="w-full h-full
                     object-cover transition duration-200 group-hover:scale-105 group-hover:duration-200
                     group-hover:transition">
             <h1 class="m-6 w-auto h-auto text-white text-3xl sm:text-6xl absolute bottom-0 right-0 z-10
@@ -113,7 +113,7 @@
             </h1>
         </div>
         <div class="w-full h-full hidden group relative flex" id="image4">
-            <img src="{{ URL('images/event/evenementSportif.jpg') }}" alt="Image 4" class="w-full h-full
+            <img src="{{ URL('images/event/evenementSportif.webp') }}" alt="Image 4" class="w-full h-full
                      object-cover transition duration-200 group-hover:scale-105 group-hover:duration-200
                      group-hover:transition">
             <h1 class="m-6 w-auto h-auto text-white text-3xl sm:text-6xl absolute bottom-0 left-0 z-10
