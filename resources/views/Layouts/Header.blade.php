@@ -1,5 +1,3 @@
-@vite('resources/css/app.css')
-
 <header class="fixed z-10 w-full p-6 h-20 flex mix-blend-difference">
     <div class="w-full h-full flex justify-start items-center">
         <a href="{{ route('Accueil') }}" class="w-auto ">
