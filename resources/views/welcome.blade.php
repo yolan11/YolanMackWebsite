@@ -16,8 +16,6 @@
     <meta property="og:site_name" content="Yolan Mack">
 
     @vite('resources/css/app.css')
-    @vite('resources/css/slider.css')
-
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
