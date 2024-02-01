@@ -153,7 +153,7 @@
                             </select>
 
                             <label class="m-4" for="editInformation">Autres informations</label>
-                            <input name="editInformation" id="editInformation" type="text" class="m-4">
+                            <textarea name="editInformation" id="editInformation" class="m-4"></textarea>
 
                             <button id="saveChanges" type="submit" class="bg-black m-4 py-2 text-white">Mettre à jour la réservation</button>
                         </form>
@@ -191,7 +191,8 @@
                             'showCountry': 'country',
                             'showEventDate': 'eventDate',
                             'showEventLocation': 'eventLocation',
-                            'showEventType': 'eventType'
+                            'showEventType': 'eventType',
+                            'showInformation': 'information'
                         };
 
                         for (const fieldId in fieldsMapping) {
@@ -241,6 +242,7 @@
                             'editCountry': 'country',
                             'editEventDate': 'eventDate',
                             'editEventLocation': 'eventLocation',
+                            'editInformation': 'information'
                         };
 
                         for (const fieldId in fieldsMapping) {

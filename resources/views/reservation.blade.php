@@ -137,9 +137,8 @@
 
                         <h1 class="test-black py-4 text-2xl ">Autres informations</h1>
                         <div class="flex flex-col">
-                            <label for="">Autres informations</label>
-                            <input type="text" name="information" id="information"
-                                   class="border border-gray-400 py-1 px-2 w-full bg-gray-100 focus:bg-white" required>
+                            <label for="information">Autres informations</label>
+                            <textarea name="information" id="information" class="border border-gray-400 py-1 px-2 w-full resize-none h-[100px] bg-gray-100 focus:bg-white" required></textarea>
                         </div>
 
                         <div class="mt-5 flex justify-center items-center">
