@@ -1,24 +1,24 @@
 <footer class=" relative bg-black w-full h-screen flex flex-col justify-center items-center">
     <div class="w-full flex flex-col">
         <div class="w-full flex flex-col p-4 sm:p-0">
-            <a href="mailto:contact@yolanmack.com" class="flex justify-center items-center" target="_blank">
+            <a href="mailto:contact@yolanmack.com" title="Redirection vers mon adresse email" class="flex justify-center items-center" target="_blank">
                 <p class="text-2xl sm:text-3xl text-white hover:text-gray-600 hover:duration-500 duration-500 text-center">Contact@yolanmack.com</p>
             </a>
-            <a href="tel:+33664568789" class="flex justify-center items-center" target="_blank">
+            <a href="tel:+33664568789" title="Redirection vers mon numéro de téléphone" class="flex justify-center items-center" target="_blank">
                 <p class="text-2xl sm:text-3xl text-white hover:text-gray-600 hover:duration-500 duration-500 text-center"> 06 64 56 87 89</p>
             </a>
-            <a href="https://maps.app.goo.gl/kZuMV7ydYMwrR2AG6" class="flex justify-center items-center" target="_blank">
+            <a href="https://maps.app.goo.gl/kZuMV7ydYMwrR2AG6" title="Redirection vers mon adresse de société" class="flex justify-center items-center" target="_blank">
                 <p class="text-2xl sm:text-3xl text-white hover:text-gray-600 hover:duration-500 duration-500 text-center"> Rue nationale, Lacroix Saint Ouen - FRANCE </p>
             </a>
         </div>
         <div class="w-full flex flex-row justify-center sm:gap-4 p-4 sm:p-0">
-            <a href="https://www.instagram.com/yolanmack/" class="col-span-1 group flex sm:justify-center items-center " target="_blank">
+            <a href="https://www.instagram.com/yolanmack/" title="Redirection sur mon instagram" class="col-span-1 group flex sm:justify-center items-center " target="_blank">
                 <img src="{{ URL('images/socialMedia/instagram.webp') }}" alt="" class="w-6 h-auto mr-2">
             </a>
-            <a href="https://twitter.com/yolanmack" class=" col-span-1 flex sm:justify-center items-center " target="_blank">
+            <a href="https://twitter.com/yolanmack" title="Redirection sur mon twitter" class=" col-span-1 flex sm:justify-center items-center " target="_blank">
                 <img src="{{ URL('images/socialMedia/twitterx.webp') }}" alt="" class="w-6 h-auto mr-2">
             </a>
-            <a href="https://wa.me/0664568789" class=" col-span-1 flex sm:justify-center items-center " target="_blank">
+            <a href="https://wa.me/0664568789" title="Redirection sur mon whatsapp" class=" col-span-1 flex sm:justify-center items-center " target="_blank">
                 <img src="{{ URL('images/socialMedia/whatsapp.webp') }}" alt="" class="w-6 h-auto mr-2">
             </a>
         </div>

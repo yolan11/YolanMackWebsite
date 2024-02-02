@@ -34,9 +34,10 @@ Route::middleware('guest')->group(function () {
     Route::post('/event/store', [EventController::class, 'store']);
 
     //Sitemap
-    Route::get('/sitemap.xml', [SitemapController::class, 'index']);
-
-
+    Route::get('/sitemap.xml', function () {
+        $content = file_get_contents(base_path('sitemap.xml'));
+        return Response::make($content, 200, ['Content-Type' => 'application/xml']);
+    });
 });
 
 
