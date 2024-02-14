@@ -181,17 +181,5 @@
         }
     });
 </script>
-
-<script>
-    window.axeptioSettings = {
-        clientId: "65c20a33673b95fb5fbc8c03",
-    };
-
-    (function(d, s) {
-        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-        e.async = true; e.src = "//static.axept.io/sdk.js";
-        t.parentNode.insertBefore(e, t);
-    })(document, "script");
-</script>
 </body>
 </html>
