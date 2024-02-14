@@ -11,7 +11,7 @@ class ImageController extends Controller
 {
     public function index()
     {
-        $images = Image::all();
+        $images = Image::all()->reverse();
 
         return view('gallery', compact('images'));
     }

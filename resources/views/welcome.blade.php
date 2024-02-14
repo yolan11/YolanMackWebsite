@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
+
     <!-- SEO website -->
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -21,6 +23,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
 
     <script src="https://player.vimeo.com/api/player.js" defer></script>
+
+    <script defer>
+        window.axeptioSettings = {
+            clientId: "65c20a33673b95fb5fbc8c03",
+        };
+
+        (function(d, s) {
+            var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+            e.async = true; e.src = "//static.axept.io/sdk.js";
+            t.parentNode.insertBefore(e, t);
+        })(document, "script");
+    </script>
 
 </head>
 <body class="bg-white">
@@ -228,5 +242,7 @@
     // Ajoutez autant d'appels à setupCarousel que nécessaire pour vos divs carrousel supplémentaires
 
 </script>
+
+
 </body>
 </html>

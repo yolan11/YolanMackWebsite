@@ -11,11 +11,11 @@
         </a>
         <a href="{{ route('Gallery') }}" title="Redirection vers la page gallerie" data-text="Contact" class=" text-white font-normal text-xl md:text-2xl pl-1
          {{ Request::is('Gallery') ? 'active' : '' }}">
-            Gallerie,
+            Galerie,
         </a>
         <a href="{{ route('Reservation') }}" title="Redirection vers la page reserver" data-text="Reserver" class=" text-white font-normal text-xl md:text-2xl
          pl-1 {{ Request::is('Reservation') ? 'active' : '' }}">
-            Reserver.
+            Réservations.
         </a>
     </div>
 </header>

@@ -21,7 +21,7 @@ class EventController extends Controller
 
     public function index()
     {
-        $events = Event::all();
+        $events = Event::all()->reverse();
 
         return view('events.index', compact('events'));
     }

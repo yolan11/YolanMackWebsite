@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
+
     <!-- SEO website -->
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -15,6 +17,18 @@
 
 
     @vite('resources/css/app.css')
+
+    <script defer>
+        window.axeptioSettings = {
+            clientId: "65c20a33673b95fb5fbc8c03",
+        };
+
+        (function(d, s) {
+            var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+            e.async = true; e.src = "//static.axept.io/sdk.js";
+            t.parentNode.insertBefore(e, t);
+        })(document, "script");
+    </script>
 </head>
 <body>
 @include('Layouts.Header')
@@ -166,6 +180,18 @@
             inputDate.value = ''; // Efface la date sélectionnée.
         }
     });
+</script>
+
+<script>
+    window.axeptioSettings = {
+        clientId: "65c20a33673b95fb5fbc8c03",
+    };
+
+    (function(d, s) {
+        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+        e.async = true; e.src = "//static.axept.io/sdk.js";
+        t.parentNode.insertBefore(e, t);
+    })(document, "script");
 </script>
 </body>
 </html>

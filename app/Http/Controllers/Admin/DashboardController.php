@@ -16,13 +16,13 @@ class DashboardController extends Controller
 
     public function showAdminUser()
     {
-        $users = User::all();
+        $users = User::all()->reverse();
         return view('Admin.AdminPage.user', compact('users'));
     }
 
     public function showAdminEvent()
     {
-        $events = Event::all();
+        $events = Event::all()->reverse();
 
         if ($events->isEmpty()) {
             return redirect('/dashboard/event/error');
@@ -33,7 +33,7 @@ class DashboardController extends Controller
 
     public function showAdminImage()
     {
-        $images = Image::all();
+        $images = Image::all()->reverse();
 
         if ($images->isEmpty()) {
             return redirect('/dashboard/image/error');
