@@ -116,7 +116,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 py-2">
                         <div class="flex flex-col col-span-1">
                             <label for="eventDate">Date de l'évènement</label>
-                            <input name="eventDate" id="eventDate" type="date"
+                            <input name="eventDate" id="eventDate" type="date" onchange="checkDate()"
                                    class="border border-gray-400 py-1 px-2 bg-gray-100 focus:bg-white" required>
                         </div>
                         <div class="flex flex-col col-span-1">
@@ -164,6 +164,17 @@
         </div>
     </div>
 </div>
+<script>
+    function checkDate() {
+        var selectedDate = new Date(document.getElementById("eventDate").value);
+        var dayOfWeek = selectedDate.getDay(); // 0 (dimanche) à 6 (samedi)
+
+        if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Si la date sélectionnée est du lundi au vendredi
+            alert("Nous ne prenons malheureuxement pas de réservation en semaine");
+            document.getElementById("eventDate").value = ""; // Réinitialiser la date sélectionnée
+        }
+    }
+</script>
 
 
 </body>
