@@ -5,15 +5,15 @@
 
     <!-- SEO website -->
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Réservation - Yolan Mack</title>
-    <link rel="icon" type="image/x-icon" href="{{ URL('images/logo.png') }}" sizes="32x32">
-    <link rel="icon" type="image/x-icon" href="{{ URL('images/logo.png') }}" sizes="192x192">
     <meta name="description" content="Vous cherchez un dj pour un évènement, un mariage, une fête privée
      autour de Compiègne ou dans les Hauts-de-France ?">
     <link rel="canonical" href="https://yolanmack.com/Reservation/">
+
+    <link rel="icon" type="image/x-icon" href="{{ URL('images/logo.png') }}" sizes="32x32">
+    <link rel="icon" type="image/x-icon" href="{{ URL('images/logo.png') }}" sizes="192x192">
 
 
     @vite('resources/css/app.css')
@@ -165,21 +165,6 @@
     </div>
 </div>
 
-<script>
-    // Sélectionnez l'élément input date.
-    const inputDate = document.querySelector('#eventDate');
 
-    // Fonction pour bloquer les jours de la semaine du lundi au vendredi.
-    inputDate.addEventListener('input', function () {
-        const selectedDate = new Date(inputDate.value);
-        const dayOfWeek = selectedDate.getDay(); // 0 pour dimanche, 1 pour lundi, 2 pour mardi, etc.
-
-        // Bloquez la sélection si le jour de la semaine est du lundi au vendredi (1 à 5).
-        if (dayOfWeek >= 1 && dayOfWeek <= 5) {
-            alert("Nous ne prenons malheureusement pas de réservation en semaine.");
-            inputDate.value = ''; // Efface la date sélectionnée.
-        }
-    });
-</script>
 </body>
 </html>

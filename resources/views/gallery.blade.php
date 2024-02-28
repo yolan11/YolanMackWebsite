@@ -2,13 +2,13 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gallerie - Yolan Mack</title>
+    <meta name="description" content="Découvrez des photos de nos évènements">
+
     <link rel="icon" type="image/x-icon" href="{{ URL('images/logo.png') }}" sizes="32x32">
     <link rel="icon" type="image/x-icon" href="{{ URL('images/logo.png') }}" sizes="192x192">
-    <meta name="description" content="Découvrez des photos de nos évènements">
 
 
     @vite('resources/css/app.css')
