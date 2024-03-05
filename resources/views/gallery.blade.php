@@ -12,6 +12,8 @@
 
 
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
+
 
     <script defer>
         window.axeptioSettings = {

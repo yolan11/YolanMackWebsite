@@ -17,6 +17,8 @@
 
 
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
+
 
     <script defer>
         window.axeptioSettings = {
@@ -170,7 +172,7 @@
         var dayOfWeek = selectedDate.getDay(); // 0 (dimanche) à 6 (samedi)
 
         if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Si la date sélectionnée est du lundi au vendredi
-            alert("Nous ne prenons malheureuxement pas de réservation en semaine");
+            alert("Nous ne prenons malheureusement pas de réservation en semaine");
             document.getElementById("eventDate").value = ""; // Réinitialiser la date sélectionnée
         }
     }

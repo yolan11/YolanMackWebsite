@@ -10,6 +10,7 @@
     <link rel="icon" type="image" href="{{ URL('images/logo.png') }}">
 
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
 </head>
 <body class="bg-white">
 <div class="flex h-screen items-center justify-center">

@@ -9,6 +9,7 @@
     <title>Dashboard - Yolan Mack</title>
     <link rel="icon" type="image" href="{{ URL('images/logo4.png') }}">
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
 </head>
 <body>
 
