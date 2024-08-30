@@ -21,8 +21,6 @@ class EventController extends Controller
 
     public function show()
     {
-        $event = Event::all();
-
         return view('reservation');
     }
 
