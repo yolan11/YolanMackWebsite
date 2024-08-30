@@ -110,7 +110,7 @@
     </div>
     <div class="col-span-1 w-full h-full aspect-square sm:aspect-video sm:w-full sm:h-[90vh] rounded-3xl overflow-hidden carousel1">
         <div class="w-full h-full group relative flex" id="image1">
-            <img src="{{ URL('images/welcomePage/IMG_0586.jpg') }}" alt="Image 1" class="w-full h-full object-cover
+            <img src="{{ URL('images/event/IMG_0586.webp') }}" alt="Image 1" class="w-full h-full object-cover
                     transition duration-200 group-hover:scale-105 group-hover:duration-200 group-hover:transition">
             <h1 class="m-6 w-auto h-auto text-white text-3xl sm:text-6xl absolute top-0 left-0 z-10
                      mix-blend-difference">14 juillet
