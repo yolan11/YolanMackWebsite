@@ -29,14 +29,14 @@ class Handler extends ExceptionHandler
         });
     }
 
-    public function render($request, Throwable $exception)
+    /*public function render($request, Throwable $exception)
     {
         if ($this->isHttpException($exception)) {
             return $this->renderHttpException($exception);
         } else {
             return response()->view('errors.404', [], 404); // Page d'erreur générique
         }
-    }
+    }*/
 
 
 

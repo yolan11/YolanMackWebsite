@@ -43,22 +43,22 @@
 @include('Layouts.Header')
 
 <div id="landingVideo" class="w-full h-full flex flex-col items-center justify-center bg-white">
-    <div class="w-full h-screen pt-20">
+    <div class="w-full h-screen">
         <div name="video" class="w-full h-full">
             <div class="w-full h-full">
                 <div class="w-full h-full bg-black overflow-hidden relative flex items-center justify-center bg-fixed">
                     <div class="w-full h-full absolute">
-                        <div class="iframe-wrapper">
+                        <div class="iframe-wrapper blur-md">
                             <iframe src="https://player.vimeo.com/video/881747373?h=734a418794&background=1&dnt=1" title="background video"></iframe>
                         </div>
                     </div>
                     <div class=" relative w-full h-full flex justify-center items-center">
                         <div class="z-1 w-full h-full flex items-center justify-center">
                             <a href="{{ route('Reservation') }}" class="group w-11/12 sm:w-10/12 md:w-9/12 h-[150px] flex justify-center items-center flex-col">
-                                <h1 class="text-white text-2xl  sm:text-4xl  lg:text-5xl lg:leading-[57px]  py-2 text-center font-semibold duration-500">
-                                    Bienvenue sur le site de la société Yolan Mack, DJ généraliste basé près de
+                                <h1 class="text-white text-2xl  sm:text-4xl  lg:text-6xl lg:leading-tight  py-2 text-center uppercase font-bold duration-500  ">
+                                    Bienvenue sur le site de Yolan Mack, DJ généraliste basé près de
                                     compiègne</h1>
-                                <p class="group-hover:text-white group-hover:font-medium text-gray-300 py-2 mt-10 uppercase flex justify-center items-center text-lg">
+                                <p class="group-hover:text-black group-hover:font-medium group-hover:bg-white text-gray-300 py-2 px-4 rounded mt-10 uppercase flex justify-center items-center text-lg">
                                     Réserver
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                          stroke-width="1.5" stroke="currentColor" class="w-4 h-4 group">
@@ -86,14 +86,21 @@
 
 
 
-<div id="aPropos" class="w-full h-full flex flex-col px-6 bg-white flex justify-center items-center">
-    <div class="w-full xl:w-9/12 h-full flex flex-col justify-start items-center py-14 sm:py-20">
-        <p class="text-black text-lg sm:text-2xl font-light sm:text-center tracking-[0.01em] w-full lg:w-10/12">"Passionné de musique,
-            je vous assure une
-            expérience musicale inoubliable ! Mes tarifs compétitifs, un système son de pointe, et des effets
-            lumineux de qualité garantissent une ambiance exceptionnelle pour tous vos événements,
-            qu'ils soient privés ou publics."
-        </p>
+<div id="aPropos" class="w-full h-full flex flex-col p-6 sm:px-20 bg-white flex justify-center items-center">
+    <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="col-span-1 sm:p-20">
+            <div class="aspect-square overflow-hidden w-full h-full items-center flex justify-center rounded-3xl">
+                <img src="{{ URL('images/welcomePage/DSC05037.webp') }}" alt="">
+            </div>
+        </div>
+        <div class=" col-span-2 w-full h-full flex justify-start items-center py-14 sm:py-20">
+            <p class="text-black text-lg sm:text-2xl font-light sm:text-center tracking-[0.01em] w-full">"Passionné de musique,
+                je vous assure une
+                expérience musicale inoubliable ! Mes tarifs compétitifs, un système son de pointe, et des effets
+                lumineux de qualité garantissent une ambiance exceptionnelle pour tous vos événements,
+                qu'ils soient privés ou publics."
+            </p>
+        </div>
     </div>
 </div>
 
@@ -101,16 +108,16 @@
     <div class="w-full h-full ">
         <h1 class="text-black text-lg sm:text-4xl py-4">J'interviens sur tous <br> types d'évènements.</h1>
     </div>
-    <div class="col-span-1 w-full h-full aspect-video sm:w-full sm:h-[80vh] overflow-hidden carousel1">
+    <div class="col-span-1 w-full h-full aspect-square sm:aspect-video sm:w-full sm:h-[90vh] rounded-3xl overflow-hidden carousel1">
         <div class="w-full h-full group relative flex" id="image1">
-            <img src="{{ URL('images/event/18ans.webp') }}" alt="Image 1" class="w-full h-full object-cover
+            <img src="{{ URL('images/welcomePage/IMG_0586.jpg') }}" alt="Image 1" class="w-full h-full object-cover
                     transition duration-200 group-hover:scale-105 group-hover:duration-200 group-hover:transition">
             <h1 class="m-6 w-auto h-auto text-white text-3xl sm:text-6xl absolute top-0 left-0 z-10
-                     mix-blend-difference">Anniversaire
+                     mix-blend-difference">14 juillet
             </h1>
         </div>
         <div class="w-full h-full hidden group relative flex" id="image2">
-            <img src="{{ URL('images/event/19ans.webp') }}" alt="Image 2" class="w-full h-full
+            <img src="{{ URL('images/event/1.webp') }}" alt="Image 2" class="w-full h-full
                     object-cover transition duration-200 group-hover:scale-105 group-hover:duration-200
                     group-hover:transition">
             <h1 class="m-6 w-auto h-auto text-white text-3xl sm:text-6xl absolute top-0 right-0 z-10
@@ -118,7 +125,7 @@
             </h1>
         </div>
         <div class="w-full h-full hidden group relative flex" id="image3">
-            <img src="{{ URL('images/event/60ans.webp') }}" alt="Image 3" class="w-full h-full
+            <img src="{{ URL('images/event/3.webp') }}" alt="Image 3" class="w-full h-full
                     object-cover transition duration-200 group-hover:scale-105 group-hover:duration-200
                     group-hover:transition">
             <h1 class="m-6 w-auto h-auto text-white text-3xl sm:text-6xl absolute bottom-0 right-0 z-10
@@ -126,7 +133,7 @@
             </h1>
         </div>
         <div class="w-full h-full hidden group relative flex" id="image4">
-            <img src="{{ URL('images/event/evenementSportif.webp') }}" alt="Image 4" class="w-full h-full
+            <img src="{{ URL('images/event/2.webp') }}" alt="Image 4" class="w-full h-full
                      object-cover transition duration-200 group-hover:scale-105 group-hover:duration-200
                      group-hover:transition">
             <h1 class="m-6 w-auto h-auto text-white text-3xl sm:text-6xl absolute bottom-0 left-0 z-10
@@ -140,7 +147,7 @@
     <div class="w-9/12 flex justify-end items-center"></div>
     <div class="w-96 flex flex-col">
         <div class="w-full">
-            <h1 class="font-bold uppercase my-4 text-sm sm:text-base">Notre matériel</h1>
+            <h1 class="font-bold uppercase my-4 text-sm sm:text-base">Mon matériel</h1>
         </div>
         <div class="w-full">
             <p class=" text-lg sm:text-4xl ">

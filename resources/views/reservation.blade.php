@@ -17,8 +17,6 @@
 
 
     @vite('resources/css/app.css')
-    @vite('resources/js/app.js')
-
 
     <script defer>
         window.axeptioSettings = {
@@ -36,7 +34,7 @@
 @include('Layouts.Header')
 <div class="bg-black w-full h-full flex justify-center items-center">
     <div class="w-full h-full flex justify-center items-center md:py-20">
-        <div class="w-full md:w-[800px] lg:w-[800px] h-full bg-white p-4">
+        <div class="w-full md:w-[800px] lg:w-[800px] h-full bg-white p-4 rounded-3xl">
             @if(session('success'))
                 <div id="myModal1" class="fixed inset-0 flex items-center justify-center z-50">
                     <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
@@ -57,7 +55,8 @@
                 </div>
             @endif
 
-            <h2 class="text-3xl pt-16  md:py-6 text-black pl-10">Formulaire de réservation</h2>
+            <h2 class="text-3xl pt-16  md:py-6 text-black pl-10 text-center uppercase">Formulaire de réservation</h2>
+        
             <div class="w-full h-full py-10 px-6">
                 <form name="reservation" method="POST" action="/event/store">
                     @CSRF
@@ -84,31 +83,6 @@
                         <div class="flex flex-col col-span-1">
                             <label for="email">Email</label>
                             <input name="email" id="email" type="email"
-                                   class="border border-gray-400 py-1 px-2 bg-gray-100 focus:bg-white" required>
-                        </div>
-                    </div>
-
-                    <h1 class="test-black py-4 text-2xl">Adresse client</h1>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 py-2">
-                        <div class="flex flex-col col-span-1">
-                            <label for="streetNumber">Numéro de voie</label>
-                            <input name="streetNumber" id="streetNumber" type="text"
-                                   class="border border-gray-400 py-1 px-2 bg-gray-100 focus:bg-white" required>
-                        </div>
-                        <div class="flex flex-col col-span-1">
-                            <label for="streetName">Rue</label>
-                            <input name="streetName" id="streetName" type="text"
-                                   class="border border-gray-400 py-1 px-2 bg-gray-100 focus:bg-white" required>
-                        </div>
-                        <div class="flex flex-col col-span-1">
-                            <label for="city">Ville</label>
-                            <input name="city" id="city" type="text"
-                                   class="border border-gray-400 py-1 px-2 bg-gray-100 focus:bg-white" required>
-                        </div>
-                        <div class="flex flex-col col-span-1">
-                            <label for="country">Pays</label>
-                            <input name="country" id="country" type="text"
                                    class="border border-gray-400 py-1 px-2 bg-gray-100 focus:bg-white" required>
                         </div>
                     </div>
@@ -148,8 +122,8 @@
 
                     <h1 class="test-black py-4 text-2xl ">Autres informations</h1>
                     <div class="flex flex-col">
-                        <label for="information">Autres informations</label>
-                        <textarea name="information" id="information" class="border border-gray-400 resize-none h-[100px] py-1 px-2 w-full bg-gray-100 focus:bg-white" required></textarea>
+                        <label for="information" class="hidden">Autres informations</label>
+                        <textarea name="information" id="information" class="border border-gray-400 resize-none h-[100px] py-1 px-2 w-full bg-gray-100 focus:bg-white"></textarea>
                     </div>
 
                     <div class="mt-5 flex justify-center items-center">
@@ -172,7 +146,7 @@
         var dayOfWeek = selectedDate.getDay(); // 0 (dimanche) à 6 (samedi)
 
         if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Si la date sélectionnée est du lundi au vendredi
-            alert("Nous ne prenons malheureusement pas de réservation en semaine");
+            alert("Nous ne prenons malheureuxement pas de réservation en semaine");
             document.getElementById("eventDate").value = ""; // Réinitialiser la date sélectionnée
         }
     }

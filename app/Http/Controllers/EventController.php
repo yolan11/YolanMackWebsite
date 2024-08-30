@@ -19,6 +19,13 @@ class EventController extends Controller
         return view('events.create');
     }
 
+    public function show()
+    {
+        $event = Event::all();
+
+        return view('reservation');
+    }
+
     public function index()
     {
         $events = Event::all()->reverse();
@@ -36,10 +43,6 @@ class EventController extends Controller
             'eventDate' => 'required',
             'eventLocation' => 'required',
             'eventType' => 'required',
-            'streetNumber' => 'required',
-            'streetName' => 'required',
-            'city' => 'required',
-            'country' => 'required',
             'information' => 'required',
         ]);
 
@@ -51,10 +54,6 @@ class EventController extends Controller
         $event->eventDate = $request->eventDate;
         $event->eventLocation = $request->eventLocation;
         $event->eventType = $request->eventType;
-        $event->streetNumber = $request->streetNumber;
-        $event->streetName = $request->streetName;
-        $event->city = $request->city;
-        $event->country = $request->country;
         $event->information = $request->information;
         $event->save();
 

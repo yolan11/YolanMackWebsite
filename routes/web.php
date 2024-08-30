@@ -30,6 +30,7 @@ Route::middleware('guest')->group(function () {
 
 
     //Crud nouvelle reservation
+    Route::get('/Reservation', [EventController::class, 'show'])->name('Reservation');
     Route::get('/event', [EventController::class, 'index']);
     Route::post('/event/store', [EventController::class, 'store']);
 

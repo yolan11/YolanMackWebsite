@@ -26,7 +26,7 @@
     <div class="absolute bottom-0 w-full">
         <div class="flex justify-center items-center flex-col ">
             <div class=" flex justify-center items-center">
-                <p class="w-full text-white text-center whitespace-nowrap">© 2023 Yolan Mack</p>
+                <p class="w-full text-white text-center whitespace-nowrap">© 2024 Yolan Mack</p>
                 <span class="px-2 text-white ">|</span>
                 <p class=" w-full text-white text-center whitespace-nowrap">Tous droits réservés</p>
             </div>
