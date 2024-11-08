@@ -142,13 +142,18 @@
 </div>
 <script>
     function checkDate() {
-        var selectedDate = new Date(document.getElementById("eventDate").value);
-        var dayOfWeek = selectedDate.getDay(); // 0 (dimanche) à 6 (samedi)
+        var eventDateInput = document.getElementById("eventDate");
+        
+        eventDateInput.addEventListener("input", function() {
+            var selectedDate = new Date(eventDateInput.value);
+            var dayOfWeek = selectedDate.getDay(); // 0 (dimanche) à 6 (samedi)
 
-        if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Si la date sélectionnée est du lundi au vendredi
-            alert("Nous ne prenons malheureuxement pas de réservation en semaine");
-            document.getElementById("eventDate").value = ""; // Réinitialiser la date sélectionnée
-        }
+            // Vérifie si le jour sélectionné est du lundi au vendredi
+            if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+                alert("Nous ne prenons malheureusement pas de réservation en semaine");
+                eventDateInput.value = ""; // Efface la date sélectionnée
+            }
+        });
     }
 </script>
 
